@@ -1,0 +1,20 @@
+<div class='container'>
+  <h1>Stupid Coaching</h1>
+  <div class='questionbox'>
+    <%= @result%>
+    <p>-You</p>
+  </div>
+
+  <div class='answerbox'>
+    <% if @result  == 'I am going to work'%>
+    <p> Great! </p>
+    <% elsif @result.include? '?'%>
+    <%= 'Silly question, get dressed and go to work!'%>
+    <% else %>
+    <%= "I   don't care, get dressed and go to work!"%>
+    <% end%>
+    <p>-Your coach</p>
+  </div>
+
+  <a href="http://localhost:3000/ask" class='link'>Ask a new question</a>
+</div>
