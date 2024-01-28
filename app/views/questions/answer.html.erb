@@ -6,9 +6,11 @@
   </div>
 
   <div class='answerbox'>
-    <% if @result  == 'I am going to work'%>
+    <% if @result.blank? %>
+    <p> I cannot hear you </p>
+    <% elsif @result == 'I am going to work'%>
     <p> Great! </p>
-    <% elsif @result.include? '?'%>
+    <% elsif @result.ends_with?('?')%>
     <%= 'Silly question, get dressed and go to work!'%>
     <% else %>
     <%= "I   don't care, get dressed and go to work!"%>
